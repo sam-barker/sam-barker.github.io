@@ -1,0 +1,53 @@
+@media only screen and (max-width: 760px) {
+  /* For mobile phones: */
+  .container {
+    width: 90%;
+    margin: 20% auto;
+  }
+
+  body {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For Desktop: */
+  .container {
+    width: 60%;
+    margin: 10% auto;
+  }
+
+  body {
+    font-size: 1.5em;
+  }
+}
+
+body {
+  background-color: #282C34;
+  color: #cecccc;
+  text-align: center;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.green {
+  color: greenyellow;
+}
+
+.red {
+  color: #f25757;
+}
+
+.yellow {
+  color: #efe03e;
+}
+
+.icon {
+  color: white;
+  margin: 25px;
+}
+
+.icon:hover {
+  color: gray;
+}
