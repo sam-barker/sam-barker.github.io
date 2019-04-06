@@ -51,3 +51,7 @@ body {
 .icon:hover {
   color: gray;
 }
+
+a {
+  text-decoration: none;
+}
