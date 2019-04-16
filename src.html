@@ -16,43 +16,20 @@
     <meta name="msapplication-config" content="browserconfig.xml">
     <meta name="theme-color" content="#000000">
 
-    <!-- Preload external CSS -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400i"
-      rel="preload"
-      as="style"
-      crossorigin="anonymous"
-      onload="this.rel = 'stylesheet'"
-    />
-    <link
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      rel="preload"
-      as="style"
-      crossorigin="anonymous"
-      onload="this.rel = 'stylesheet'"
-    />
-
-    <!-- If JS is disabled -->
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Roboto:300,400i"
-        crossorigin="anonymous"
-      >
-    </noscript>
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        crossorigin="anonymous"
-      >
-    </noscript>
-
     <!-- Inline critical path CSS as it will be faster to render -->
     <style>
+      /* Streamlined version of fontawesome */
+      @font-face {
+        font-family: "Icon Font";
+        font-style: normal;
+        font-weight: normal;
+        font-display: auto;
+        src: url("icon-font.woff2") format("woff2");
+      }
+
       @media only screen and (max-width: 760px) {
         /* For mobile phones: */
-        .container {
+        #container {
           width: 90%;
           margin: 7.5% auto;
         }
@@ -60,7 +37,7 @@
 
       @media only screen and (min-width: 768px) {
         /* For Desktop: */
-        .container {
+        #container {
           width: 50%;
           margin: 2.5% auto;
         }
@@ -71,8 +48,9 @@
         color: black;
         text-align: center;
         line-height: 1.5;
-        font-display: auto;
-        font-family: 'Roboto', sans-serif;
+        font-display: swap;
+        font-family: 'Helvetica', 'Arial', 'Courier';
+        font-weight: lighter;
         font-size: 1em;
         padding: 0;
         margin: 0;
@@ -85,22 +63,18 @@
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
 
-      blockquote {
+      #sdet-quote {
         background: #f9f9f9;
         border-left: 10px solid #ccc;
         margin: 1.5em 10px;
         padding: 0.5em 10px;
       }
 
-      blockquote p {
+      #sdet-quote p {
         display: inline;
       }
 
-      h4 {
-        font-style: italic;
-      }
-
-      .icon-container {
+      #icon-container {
         margin-top: 1em;
         margin-bottom: 1.5em;
       }
@@ -108,22 +82,53 @@
       hr {
         width: 60%;
       }
-
+      
       a {
-        text-decoration: none;
+        color:black;
+      }
+      
+      a:hover {
+        color:gray
       }
 
-      i {
-        color: black;
+      /* streamlines version of font awesome */
+      .icon {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        font-display: swap;
+        line-height: 1;
+        font-family: 'Icon Font';
+        font-size: 3em
       }
 
-      a > i:hover {
-        color: gray;
+      .js:before {
+        content: "\f3b9"
       }
+
+      .node:before {
+        content: "\f3d3"
+      }
+
+      .react:before {
+        content: "\f41b"
+      }
+
+      .html5:before {
+        content: "\f13b"
+      }
+
+      .css3:before {
+        content: "\f38b"
+      }
+
     </style>
   </head>
 <body>
-  <div class="container">
+  <div id="container">
     <header>
       <img id="header-image" src="images/me.jpg" alt="Me" />
       <h1>Samuel Barker</h1>
@@ -138,7 +143,9 @@
       and code coverage.
     </p>
     <h4>What does SDET mean?</h4>
-    <blockquote cite="https://www.guru99.com/software-developer-engineer-test-sdet.html">
+    <blockquote
+      id="sdet-quote"
+      cite="https://www.guru99.com/software-developer-engineer-test-sdet.html">
       <p>
         "SDET is an IT professional who can work equally effectively in development and testing. Full form of SDET is Software Development Engineer in Test and he/she takes part in the complete software development process."
       </p>
@@ -146,26 +153,24 @@
     <h4>
       My favourite technologies are
     </h4>
-    <div class="icon-container">
-      <i class="fab fa-3x fa-js-square" alt="JavaScript"></i>
-      <i class="fab fa-3x fa-node-js" alt="NodeJS"></i>
-      <i class="fab fa-3x fa-react" alt="React"></i>
-      <i class="fab fa-3x fa-html5" alt="HTML5"></i>
-      <i class="fab fa-3x fa-css3-alt" alt="CSS3"></i>
+    <div id="icon-container">
+      <i class="icon js" alt="JavaScript"></i>
+      <i class="icon node" alt="NodeJS"></i>
+      <i class="icon react" alt="React"></i>
+      <i class="icon html5" alt="HTML5"></i>
+      <i class="icon css3" alt="CSS3"></i>
     </div>
   </div>
   <hr/>
   <footer>
-    <div class="icon-container">
-      <a href="https://github.com/sam-barker" alt="Github" aria-label="See some of my projects on my Github">
-        <i class="fa-2x fab fa-github-alt icon"></i>
-      </a>
-      &nbsp
-      <a href="https://www.linkedin.com/in/samuel-barker-90169414a" alt="LinkedIn" aria-label="Have a look at my LinkedIn profile">
-        <i class="fa-2x fab fa-linkedin icon"></i>
-      </a>
-    </div>
-    <h4><i class="far fa-copyright" alt="Copyright"></i> Samuel Barker 2019</h4>
+    <a href="https://github.com/sam-barker" alt="Github" aria-label="See some of my projects on my Github">
+      Github
+    </a>
+    &nbsp
+    <a href="https://www.linkedin.com/in/samuel-barker-90169414a" alt="LinkedIn" aria-label="Have a look at my LinkedIn profile">
+      LinkedIn
+    </a>
+    <h4>&copy; Samuel Barker 2019</h4>
   </footer>
 </html>
 
