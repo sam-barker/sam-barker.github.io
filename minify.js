@@ -18,9 +18,9 @@ const minifyOpts = {
 
 (async () => {
   try {
-    const htmlToMinify = await fs.readFileSync(`${__dirname}/index.html`, 'utf8');
+    const htmlToMinify = await fs.readFileSync(`${__dirname}/src.html`, 'utf8');
     const html = minify(htmlToMinify, minifyOpts);
-    await fs.writeFileSync(`${__dirname}/docs/index.html`, html, 'utf8');
+    await fs.writeFileSync(`${__dirname}/index.html`, html, 'utf8');
   } catch (e) {
     console.error(e);
     process.exit(1);
