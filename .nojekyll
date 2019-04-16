@@ -1,0 +1,7 @@
+node_modules/
+.gitignore
+src.html
+minify.js
+package-lock.json
+package.json
+README.md

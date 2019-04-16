@@ -2,10 +2,9 @@
   "name": "sam-barker.github.io",
   "version": "1.0.0",
   "description": "Public website",
-  "main": "index.js",
   "scripts": {
     "build": "node ./minify.js",
-    "start": "npm run build && open docs/index.html"
+    "start": "npm run build && open index.html"
   },
   "repository": {
     "type": "git",
