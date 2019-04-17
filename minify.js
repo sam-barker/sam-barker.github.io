@@ -4,6 +4,7 @@ const fs = require('fs');
 const minifyOpts = {
   removeAttributeQuotes: true,
   collapseWhitespace: true,
+  collapseInlineTagWhitespace: true,
   html5: true,
   keepClosingSlash: true,
   minifyCSS: true,
@@ -13,7 +14,6 @@ const minifyOpts = {
   removeComments: true,
   removeEmptyAttributes: true,
   removeRedundantAttributes: true,
-
 };
 
 (async () => {

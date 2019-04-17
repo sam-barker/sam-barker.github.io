@@ -18,20 +18,15 @@
 
     <!-- Inline critical path CSS as it will be faster to render -->
     <style>
-      /* Streamlined version of fontawesome */
-      @font-face {
-        font-family: "Icon Font";
-        font-style: normal;
-        font-weight: normal;
-        font-display: swap;
-        src: url("icon-font.woff2") format("woff2");
-      }
-
       @media only screen and (max-width: 760px) {
         /* For mobile phones: */
         #container {
           width: 90%;
           margin: 7.5% auto;
+        }
+
+        li {
+          padding: 1em 0;
         }
       }
 
@@ -74,57 +69,25 @@
         display: inline;
       }
 
-      #icon-container {
-        margin-top: 1em;
-        margin-bottom: 1.5em;
-      }
-
       hr {
         width: 60%;
+      }
+
+      ul {
+        padding: 0;
+        list-style-type: none;
       }
       
       a {
         color:black;
+        /* margin: 0 0.5em; */
+        text-decoration: none;
       }
       
       a:hover {
-        color:gray
+        color: #f43a30;
+        text-decoration: underline;
       }
-
-      /* streamlines version of font awesome */
-      .icon {
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
-        display: inline-block;
-        font-style: normal;
-        font-variant: normal;
-        text-rendering: auto;
-        font-display: swap;
-        line-height: 1;
-        font-family: 'Icon Font';
-        font-size: 3em
-      }
-
-      .js:before {
-        content: "\f3b9"
-      }
-
-      .node:before {
-        content: "\f3d3"
-      }
-
-      .react:before {
-        content: "\f41b"
-      }
-
-      .html5:before {
-        content: "\f13b"
-      }
-
-      .css3:before {
-        content: "\f38b"
-      }
-
     </style>
   </head>
 <body>
@@ -153,24 +116,80 @@
     <h4>
       My favourite technologies are
     </h4>
-    <div id="icon-container">
-      <i class="icon js" alt="JavaScript"></i>
-      <i class="icon node" alt="NodeJS"></i>
-      <i class="icon react" alt="React"></i>
-      <i class="icon html5" alt="HTML5"></i>
-      <i class="icon css3" alt="CSS3"></i>
-    </div>
+    <ul>
+      <li>
+        <a
+          href="https://en.wikipedia.org/wiki/JavaScript"
+          alt="JavaScript"
+          aria-label="See what JavaScript is on Wikipedia"
+        >
+          JavaScript
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://nodejs.org/en/about/"
+          alt="NodeJS"
+          aria-label="Find out more about NodeJS here"
+        >
+          NodeJS
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://reactjs.org/"
+          alt="React"
+          aria-label="Find out about ReactJS here"
+        >
+          React
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://en.wikipedia.org/wiki/HTML5"
+          alt="HTML5"
+          aria-label="See what HTML5 is on Wikipedia"
+        >
+          HTML5
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets#CSS_3"
+          alt="CSS3"
+          aria-label="See what CSS3 is on Wikipedia"
+        >
+          CSS3
+        </a>
+      </li>
+    </ul>
+    <hr/>
+    <footer>
+      <h4>
+        Find me on
+      </h4>
+      <ul>
+        <li>
+          <a
+            href="https://github.com/sam-barker"
+            alt="Github"
+            aria-label="See some of my projects on my Github"
+          >
+            Github
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/samuel-barker-90169414a"
+            alt="LinkedIn"
+            aria-label="Have a look at my LinkedIn profile"
+          >
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+      <h4>&copy; Samuel Barker 2019</h4>
+    </footer>
   </div>
-  <hr/>
-  <footer>
-    <a href="https://github.com/sam-barker" alt="Github" aria-label="See some of my projects on my Github">
-      Github
-    </a>
-    &nbsp
-    <a href="https://www.linkedin.com/in/samuel-barker-90169414a" alt="LinkedIn" aria-label="Have a look at my LinkedIn profile">
-      LinkedIn
-    </a>
-    <h4>&copy; Samuel Barker 2019</h4>
-  </footer>
 </html>
 
