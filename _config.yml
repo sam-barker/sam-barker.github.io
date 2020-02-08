@@ -1,1 +1,0 @@
-exclude: ['node_modules', '.gitignore', 'minify.js', 'package-lock.json', 'package.json', 'README.md', 'src.html']
