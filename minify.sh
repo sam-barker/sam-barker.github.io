@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 function main {
+  mkdir -p dist/
   npx clean-css-cli -o dist/style.css src/style.css \
   && \
   npx html-minifier \
